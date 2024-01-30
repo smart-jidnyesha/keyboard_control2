@@ -27,7 +27,7 @@ def main(args=None):
     rclpy.init(args=args)
 
     node = rclpy.create_node('keyboard_input3')
-    publisher = node.create_publisher(Twist, 'turtle1/cmd_vel', 10)
+    publisher = node.create_publisher(Twist, 'cmd_vel', 10)
 
 
     def get_keys(): #gets keyboard input
@@ -62,8 +62,8 @@ def main(args=None):
 
 
     def keyboard_input():
-        speed = 0.5 #default speed val
-        turn = 1.0 #default turn val
+        speed = 0.2 #default speed val
+        turn = 0.5 #default turn val
         x = 0
         y = 0
         z = 0
